@@ -13,10 +13,6 @@ $ npm install redhotmagma/react-native-adobe-analytics --save
 $ react-native link
 ```
 
-### Adobe Getting Started Guide
-#### iOS:
-https://marketing.adobe.com/resources/help/en_US/mobile/ios/dev_qs.html
-
 ### Configuration file
 Get your ADBMobileConfig.json file from Adobe Mobile Services.
 - On iOS, add the ADBMobileConfig.json file to your XCode project so that it's accessible in your bundle.
@@ -24,7 +20,13 @@ Get your ADBMobileConfig.json file from Adobe Mobile Services.
 
 
 ### iOS Configuration
-#### Install Adobe Mobile SDK
+#### Manually Install Adobe Mobile SDK
+- Add the extracted SDK Files to the folder `ios/AdobeMobileLibrary`.
+- Add your JSON Configuration to that same folder.
+- Follow the instructions provided by Adobe: https://marketing.adobe.com/resources/help/en_US/mobile/ios/dev_qs.html
+
+
+#### Install Adobe Mobile SDK via Podfile
 Add this to your Podfile and run `pod install`
 ```
 pod 'AdobeMobileSDK', '~> 4.14.1'
