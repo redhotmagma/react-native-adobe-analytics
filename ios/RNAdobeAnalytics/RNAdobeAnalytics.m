@@ -41,10 +41,10 @@ RCT_EXPORT_METHOD(init: (NSDictionary *)options)
 RCT_EXPORT_METHOD(setPrivacyStatus: (NSString *)status)
 {
     if( [status isEqualToString:@"OPT_IN"] ) {
-        [ADBMobile setPrivacyStatus:(ADBMobilePrivacyStatus)ADBMobilePrivacyStatusOptIn]
+        [ADBMobile setPrivacyStatus:(ADBMobilePrivacyStatus)ADBMobilePrivacyStatusOptIn];
     }
     else if( [status isEqualToString:@"OPT_OUT"] ) {
-        [ADBMobile setPrivacyStatus:(ADBMobilePrivacyStatus)ADBMobilePrivacyStatusOptOut]
+        [ADBMobile setPrivacyStatus:(ADBMobilePrivacyStatus)ADBMobilePrivacyStatusOptOut];
     }
 }
 
