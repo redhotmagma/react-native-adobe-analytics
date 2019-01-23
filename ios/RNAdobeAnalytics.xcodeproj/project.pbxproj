@@ -242,11 +242,13 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/../../../ios/Frameworks",
 					"$(PROJECT_DIR)/../../../ios/Pods/AdobeMobileSDK/AdobeMobileLibrary",
+					"$(PROJECT_DIR)/../../../ios/AdobeMobileLibrary",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/../../react-native/React",
 					"$(PROJECT_DIR)/../../../ios/Pods/AdobeMobileSDK/AdobeMobileLibrary",
 					"$(PROJECT_DIR)/../../../ios/Frameworks",
+					"$(PROJECT_DIR)/../../../ios/AdobeMobileLibrary",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
