@@ -2,14 +2,20 @@
 
 React Native bridge for Adobe Analytics.
 
+This is a fork of https://github.com/smalltownheroes/react-native-adobe-analytics
+
 ## Installation
 ```
-$ npm install react-native-adobe-analytics --save
+$ npm install redhotmagma/react-native-adobe-analytics --save
 ```
 ### Automatic linking
 ```
 $ react-native link
 ```
+
+### Adobe Getting Started Guide
+#### iOS:
+https://marketing.adobe.com/resources/help/en_US/mobile/ios/dev_qs.html
 
 ### Configuration file
 Get your ADBMobileConfig.json file from Adobe Mobile Services.
@@ -45,6 +51,11 @@ AdobeAnalyticsAPI.init()
 
 Initializes Adobe Analytics 
 - debug: Boolean
+
+`setPrivacyStatus( status )`
+
+Sets the privacy status of the current user. 
+- Status: String (OPT_IN|OPT_OUT)
 
 `trackState(state, contextData)`
 
