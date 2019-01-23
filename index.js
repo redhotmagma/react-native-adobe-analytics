@@ -12,6 +12,10 @@ export class AdobeAnalyticsAPI {
     RNAdobeAnalytics.init({ debug });
   }
 
+  static setPrivacyStatus(status) {
+    RNAdobeAnalytics.setPrivacyStatus(status);
+  }
+
   static trackState(state, contextData = {}) {
     RNAdobeAnalytics.trackState(state, contextData);
   }
@@ -27,7 +31,6 @@ export class AdobeAnalyticsAPI {
     static trackTimedActionStart(action, contextData = {}) {
     RNAdobeAnalytics.trackTimedActionStart(action, contextData);
   }
-
 
   static trackTimedActionUpdate(action, contextData = {}) {
     RNAdobeAnalytics.trackTimedActionUpdate(action, contextData);

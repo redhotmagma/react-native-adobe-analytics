@@ -27,14 +27,24 @@ RCT_EXPORT_MODULE();
 RCT_EXPORT_METHOD(init: (NSDictionary *)options)
 {
     NSString *config = [[NSBundle mainBundle] pathForResource:@"ADBMobileConfig" ofType:@"json"];
-    
+
     [ADBMobile collectLifecycleData];
     [ADBMobile overrideConfigPath:config];
-    
+
     BOOL debug = options[@"debug"];
-    
+
     if (debug) {
         [ADBMobile setDebugLogging:debug];
+    }
+}
+
+RCT_EXPORT_METHOD(setPrivacyStatus: (NSString *)status)
+{
+    if( [status isEqualToString:@"OPT_IN"] ) {
+        [ADBMobile setPrivacyStatus:(ADBMobilePrivacyStatus)ADBMobilePrivacyStatusOptIn]
+    }
+    else if( [status isEqualToString:@"OPT_OUT"] ) {
+        [ADBMobile setPrivacyStatus:(ADBMobilePrivacyStatus)ADBMobilePrivacyStatusOptOut]
     }
 }
 
